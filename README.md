@@ -17,7 +17,21 @@ Also I get to stretch my CSS muscles a little bit...
 - Make sure you have [Sass](https://sass-lang.com/) installed
 - Run `build.sh`
 
-## Browser support
+## Key Changes
+
+A none-exhaustive list of changes away from Pico:
+- The following variables and associated conditionals have been removed
+  and the functionality explicitly either included or excluded:
+  - `$enable-grid` - included
+  - `$enable-transitions` - included
+  - `$enable-important` - included
+  - `$enable-viewport` - included
+  - `$enable-class-container` - included
+  - `$enable-viewport` - included
+  - `$enable-semantic-container` - excluded
+  - `$enable-responsive-typography` - excluded
+
+## Browser Support
 
 Who knows ¯\\_(ツ)_/¯ - it works well enough for me... 🤣
 

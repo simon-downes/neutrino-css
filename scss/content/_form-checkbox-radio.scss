@@ -105,9 +105,7 @@
     background-color: var(--color);
     content: "";
 
-    @if $enable-transitions {
-      transition: margin $switch-transition;
-    }
+    transition: margin $switch-transition;
   }
 
   &:checked {
@@ -127,7 +125,7 @@
 [type="radio"]:checked,
 [type="checkbox"][role="switch"],
 [type="checkbox"][role="switch"]:checked {
-  
+
   &[aria-invalid="false"] {
     --border-color: var(--form-element-valid-border-color);
   }

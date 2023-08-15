@@ -60,10 +60,8 @@ a,
   color: var(--color);
   text-decoration: var(--text-decoration);
 
-  @if $enable-transitions {
-    transition: background-color var(--transition), color var(--transition),
-      text-decoration var(--transition), box-shadow var(--transition);
-  }
+  transition: background-color var(--transition), color var(--transition),
+    text-decoration var(--transition), box-shadow var(--transition);
 
   &:is([aria-current], :hover, :active, :focus) {
     --color: var(--primary-hover);
@@ -74,31 +72,29 @@ a,
     --background-color: var(--primary-focus);
   }
 
-  @if $enable-classes {
-    // Secondary
-    &.secondary {
-      --color: var(--secondary);
+  // Secondary
+  &.secondary {
+    --color: var(--secondary);
 
-      &:is([aria-current], :hover, :active, :focus) {
-        --color: var(--secondary-hover);
-      }
-
-      &:focus {
-        --background-color: var(--secondary-focus);
-      }
+    &:is([aria-current], :hover, :active, :focus) {
+      --color: var(--secondary-hover);
     }
 
-    // Contrast
-    &.contrast {
-      --color: var(--contrast);
+    &:focus {
+      --background-color: var(--secondary-focus);
+    }
+  }
 
-      &:is([aria-current], :hover, :active, :focus) {
-        --color: var(--contrast-hover);
-      }
+  // Contrast
+  &.contrast {
+    --color: var(--contrast);
 
-      &:focus {
-        --background-color: var(--contrast-focus);
-      }
+    &:is([aria-current], :hover, :active, :focus) {
+      --color: var(--contrast-hover);
+    }
+
+    &:focus {
+      --background-color: var(--contrast-focus);
     }
   }
 }
@@ -145,38 +141,19 @@ h6 {
 }
 
 // Heading group
-@if $enable-classes == false {
-  hgroup {
-    margin-bottom: var(--typography-spacing-vertical);
+hgroup,
+.headings {
+  margin-bottom: var(--typography-spacing-vertical);
 
-    > * {
-      margin-bottom: 0;
-    }
-
-    > *:last-child {
-      --color: var(--muted-color);
-      --font-weight: unset;
-      font-size: 1rem;
-      font-family: unset;
-    }
+  > * {
+    margin-bottom: 0;
   }
-}
 
-@if $enable-classes {
-  hgroup,
-  .headings {
-    margin-bottom: var(--typography-spacing-vertical);
-
-    > * {
-      margin-bottom: 0;
-    }
-
-    > *:last-child {
-      --color: var(--muted-color);
-      --font-weight: unset;
-      font-size: 1rem;
-      font-family: unset;
-    }
+  > *:last-child {
+    --color: var(--muted-color);
+    --font-weight: unset;
+    font-size: 1rem;
+    font-family: unset;
   }
 }
 

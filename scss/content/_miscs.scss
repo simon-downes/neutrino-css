@@ -19,12 +19,7 @@ hr {
 // Add the correct display in IE 10+
 [hidden],
 template {
-  @if $enable-important {
-    display: none !important;
-  } 
-  @else {
-    display: none;
-  }
+  display: none !important;
 }
 
 // Add the correct display in IE 9-

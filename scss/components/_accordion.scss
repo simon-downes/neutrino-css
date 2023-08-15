@@ -17,9 +17,7 @@ details {
       color: var(--accordion-close-summary-color);
     }
 
-    @if $enable-transitions {
-      transition: color var(--transition);
-    }
+    transition: color var(--transition);
 
     // Reset marker
     &::-webkit-details-marker {
@@ -48,9 +46,7 @@ details {
       background-repeat: no-repeat;
       content: "";
 
-      @if $enable-transitions {
-        transition: transform var(--transition);
-      }
+      transition: transform var(--transition);
     }
 
     &:focus {
@@ -72,13 +68,11 @@ details {
         background-image: var(--icon-chevron-button);
       }
 
-      @if $enable-classes {
-        // .contrast
-        &:not(.outline).contrast {
-          // Marker
-          &::after {
-            background-image: var(--icon-chevron-button-inverse);
-          }
+      // .contrast
+      &:not(.outline).contrast {
+        // Marker
+        &::after {
+          background-image: var(--icon-chevron-button-inverse);
         }
       }
     }

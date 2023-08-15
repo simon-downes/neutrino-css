@@ -8,33 +8,6 @@
   --font-weight: 400;
   --font-size: 16px;
 
-  // Responsive typography
-  @if $enable-responsive-typography {
-    @if map-get($breakpoints, "sm") {
-      @media (min-width: map-get($breakpoints, "sm")) {
-        --font-size: 17px;
-      }
-    }
-
-    @if map-get($breakpoints, "md") {
-      @media (min-width: map-get($breakpoints, "md")) {
-        --font-size: 18px;
-      }
-    }
-
-    @if map-get($breakpoints, "lg") {
-      @media (min-width: map-get($breakpoints, "lg")) {
-        --font-size: 19px;
-      }
-    }
-
-    @if map-get($breakpoints, "xl") {
-      @media (min-width: map-get($breakpoints, "xl")) {
-        --font-size: 20px;
-      }
-    }
-  }
-
   // Borders
   --border-radius: 0.25rem;
   --border-width: 1px;
@@ -50,10 +23,8 @@
   --block-spacing-vertical: calc(var(--spacing) * 2);
   --block-spacing-horizontal: var(--spacing);
 
-  @if ($enable-classes and $enable-grid) {
-    --grid-spacing-vertical: 0;
-    --grid-spacing-horizontal: var(--spacing);
-  }
+  --grid-spacing-vertical: 0;
+  --grid-spacing-horizontal: var(--spacing);
 
   // Spacings for form elements and button
   --form-element-spacing-vertical: 0.75rem;
@@ -161,11 +132,9 @@ a {
   --text-decoration: none;
 
   // Secondary & Contrast
-  @if $enable-classes {
-    &.secondary,
-    &.contrast {
-      --text-decoration: underline;
-    }
+  &.secondary,
+  &.contrast {
+    --text-decoration: underline;
   }
 }
 
