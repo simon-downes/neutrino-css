@@ -1,18 +1,16 @@
 <!doctype html>
 <html lang="en">
   <head>
-    ${require('./_head.html')
-      title="Dropdowns"
-      description="Dropdown menus and custom selects without JavaScript." 
-      canonical="dropdowns.html"
-    }
+    {{include "./_head.html" "Dropdowns"
+      "Dropdown menus and custom selects without JavaScript."
+    }}
   </head>
 
   <body>
-    ${require('./_nav.html')}
+    {{include "./_nav.html"}}
 
     <main class="container" id="docs">
-      ${require('./_sidebar.html') active="dropdowns-link"}
+      {{include "./_sidebar.html" "dropdowns-link"}}
 
       <div role="document">
         <section id="dropdown">
@@ -56,7 +54,7 @@
 &lt;/<b>select</b>&gt;
 </code></pre>
 
-            </footer> 
+            </footer>
           </article>
           <p><code>&lt;<b>summary</b> <i>role</i>=<u>"button"</u>&gt;</code> transforms the dropdown into a button.</p>
           <article aria-label="Dropdowns as Buttons">
@@ -122,8 +120,8 @@
   &lt;/<b>ul</b>&gt;
 &lt;/<b>details</b>&gt;
 </code></pre>
-              
-            </footer> 
+
+            </footer>
           </article>
           <p>Dropdowns can be used as custom selects with <code>&lt;<b>input</b> <i>type</i>=<u>"radio"</u>&gt;</code> or  <code>&lt;<b>input</b> <i>type</i>=<u>"checkbox"</u>&gt;</code></p>
           <article aria-label="Dropdowns with radio buttons or checkboxes">
@@ -224,8 +222,8 @@
     &lt;/<b>li</b>&gt;
   &lt;/<b>ul</b>&gt;
 &lt;/<b>details</b>&gt;
-              
-            </footer> 
+
+            </footer>
           </article>
           <p>Dropdowns can be used inside a <a href="navs.html">&lt;nav&gt;</a> with a nested <code>&lt;<b>details</b> <i>role</i>=<u>"list"</u>&gt;</code></p>
           <p>Example with a dropdown as a link:</p>
@@ -269,7 +267,7 @@
   &lt;/<b>ul</b>&gt;
 &lt;/<b>nav</b>&gt;</code></pre>
 
-            </footer> 
+            </footer>
           </article>
           <p>Example with a default dropdown and a dropdown as a button:</p>
           <article aria-label="Dropdowns inside a nav">
@@ -324,7 +322,7 @@
   &lt;/<b>ul</b>&gt;
 &lt;/<b>nav</b>&gt;</code></pre>
 
-            </footer> 
+            </footer>
           </article>
           <p>You can also use  <code>&lt;<b>li</b> <i>role</i>=<u>"list"</u>&gt;</code> as a nested wrapper to render a list as a dropdown.</p>
           <p>ℹ️&nbsp;This syntax is experimental. In this version, the dropdown menu is triggered on hover.</p>
@@ -366,11 +364,11 @@
   &lt;/<b>ul</b>&gt;
 &lt;/<b>nav</b>&gt;</code></pre>
 
-            </footer> 
+            </footer>
           </article>
         </section>
 
-        ${require('./_footer.html')}
+        {{include "./_footer.html"}}
 
       </div>
     </main>

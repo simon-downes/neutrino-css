@@ -1,18 +1,16 @@
 <!doctype html>
 <html lang="en">
   <head>
-    ${require('./_head.html')
-      title="Progress"
-      description="Progress bar element in pure HTML, without JavaScript."
-      canonical="progress.html"
-    }
+    {{include "./_head.html" "Progress"
+      "Progress bar element in pure HTML, without JavaScript."
+    }}
   </head>
 
   <body>
-    ${require('./_nav.html')}
+    {{include "./_nav.html"}}
 
     <main class="container" id="docs">
-      ${require('./_sidebar.html') active="progress-link"}
+      {{include "./_sidebar.html" "progress-link"}}
 
       <div role="document">
         <section id="progress">
@@ -39,7 +37,7 @@
           </article>
         </section>
 
-        ${require('./_footer.html')}
+        {{include "./_footer.html"}}
 
       </div>
     </main>

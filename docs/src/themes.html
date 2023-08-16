@@ -1,24 +1,22 @@
 <!doctype html>
 <html lang="en">
   <head>
-    ${require('./_head.html') 
-      title="Themes" 
-      description="Pico is shipped with 2 consistent themes: Light & Dark. The Light theme is used by default. The Dark theme is automatically enabled if the user has dark mode enabled ('prefers-color-scheme: dark')."
-      canonical="themes.html"
-    }
+    {{include "./_head.html" "Themes"
+      "Neutrino is shipped with 2 consistent themes: Light & Dark. The Light theme is used by default. The Dark theme is automatically enabled if the user has dark mode enabled ('prefers-color-scheme: dark')."
+    }}
   </head>
 
   <body>
-    ${require('./_nav.html')}
-    
+    {{include "./_nav.html"}}
+
     <main class="container" id="docs">
-      ${require('./_sidebar.html') active="themes-link"}
-      
+      {{include "./_sidebar.html" "themes-link"}}
+
       <div role="document">
         <section id="themes">
           <hgroup>
             <h1>Themes</h1>
-            <h2>Pico is shipped with 2 consistent themes: Light & Dark.</h2>
+            <h2>Neutrino is shipped with 2 consistent themes: Light & Dark.</h2>
           </hgroup>
           <p>The Light theme is used by default. The Dark theme is automatically enabled if the user has dark mode enabled <code><i>prefers-color-scheme</i>: <u>dark</u></code></p>
           <article aria-label="Theme switcher">
@@ -57,7 +55,7 @@
           </article>
         </section>
 
-        ${require('./_footer.html')}
+        {{include "./_footer.html"}}
 
       </div>
     </main>

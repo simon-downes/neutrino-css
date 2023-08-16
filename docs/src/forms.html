@@ -1,18 +1,16 @@
 <!doctype html>
 <html lang="en">
   <head>
-    ${require('./_head.html')
-      title="Forms"
-      description="All form elements are fully responsive in pure semantic HTML, allowing forms to scale gracefully across devices and viewports."
-      canonical="forms.html"
-    }
+    {{include "./_head.html" "Forms"
+      "All form elements are fully responsive in pure semantic HTML, allowing forms to scale gracefully across devices and viewports."
+    }}
   </head>
 
   <body>
-    ${require('./_nav.html')}
+    {{include "./_nav.html"}}
 
     <main class="container" id="docs">
-      ${require('./_sidebar.html') active="forms-link"}
+      {{include "./_sidebar.html" "forms-link"}}
 
       <div role="document">
         <section id="forms">
@@ -263,7 +261,7 @@
           </article>
         </section>
 
-        ${require('./_footer.html')}
+        {{include "./_footer.html"}}
 
       </div>
     </main>

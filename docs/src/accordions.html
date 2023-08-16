@@ -1,19 +1,17 @@
 <!doctype html>
 <html lang="en">
   <head>
-    ${require('./_head.html') 
-      title="Accordions" 
-      description="Toggle sections of content in pure HTML, without JavaScript."
-      canonical="accordions.html"
-    }
+    {{include "./_head.html" "Accordions"
+      "Toggle sections of content in pure HTML, without JavaScript."
+    }}
   </head>
 
   <body>
-    ${require('./_nav.html')}
-    
+    {{include "./_nav.html"}}
+
     <main class="container" id="docs">
-      ${require('./_sidebar.html') active="accordions-link"}
-      
+      {{include "./_sidebar.html" "accordions-link"}}
+
       <div role="document">
         <section id="accordions">
           <hgroup>
@@ -89,8 +87,8 @@
           </article>
         </section>
 
-        ${require('./_footer.html')}
-        
+        {{include "./_footer.html"}}
+
       </div>
     </main>
     <script src="js/commons.min.js"></script>

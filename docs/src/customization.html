@@ -1,19 +1,17 @@
 <!doctype html>
 <html lang="en">
   <head>
-    ${require('./_head.html') 
-      title="Customization" 
-      description="You can customize themes with SCSS, or you can edit the CSS variables. All Pico's styles and colors are set with CSS custom properties (variables)."
-      canonical="customization.html"
-    }
+    {{include "./_head.html" "Customization"
+      "You can customize themes with SCSS, or you can edit the CSS variables. All Pico's styles and colors are set with CSS custom properties (variables)."
+    }}
   </head>
 
   <body>
-    ${require('./_nav.html')}
-    
+    {{include "./_nav.html"}}
+
     <main class="container" id="docs">
-      ${require('./_sidebar.html') active="customization-link"}
-      
+      {{include "./_sidebar.html" "customization-link"}}
+
       <div role="document">
         <section id="customization">
           <hgroup>
@@ -47,9 +45,9 @@
 
             </footer>
           </article>
-          <p>There are 2 ways to customize your version of Pico CSS:</p>
+          <p>There are 2 ways to customize your version of Neutrino CSS:</p>
           <h3>Overriding CSS variables</h3>
-          <p>All Pico's styles and colors are set with <em>CSS custom properties</em> (variables). Just override the CSS variables to customize your version of Pico.</p>
+          <p>All Neutrino's styles and colors are set with <em>CSS custom properties</em> (variables). Just override the CSS variables to customize your version of Neutrino.</p>
 
 <pre><code><em>/* <span class="name"></span>Light scheme (Default) */
 /* Can be forced with data-theme="light" */</em>
@@ -90,10 +88,10 @@
 }
 </code></pre>
 
-          <p>You can find all the CSS variables used in the default theme here: <a href="https://github.com/picocss/pico/blob/master/css/themes/default.css">css/themes/default.css</a></p>
-          <h3>Importing Pico SASS library</h3>
-          <p>We recommend customizing Pico by importing SASS source files into your project. This way, you can keep Pico up to date without conflicts since Pico code and your custom code are separated.</p>
-          <p>Compile the SASS file to CSS to get a custom version of Pico.</p>
+          <p>You can find all the CSS variables used in the default theme here: <a href="https://github.com/simon-downes/neutrino-cssblob/master/css/themes/default.css">css/themes/default.css</a></p>
+          <h3>Importing Neutrino SASS library</h3>
+          <p>We recommend customizing Neutrino by importing SASS source files into your project. This way, you can keep Neutrino up to date without conflicts since Neutrino code and your custom code are separated.</p>
+          <p>Compile the SASS file to CSS to get a custom version of Neutrino.</p>
 
 <pre><code><em>/* Custom <span class="name"> </span>version */</em>
 
@@ -102,8 +100,8 @@
 <i>$primary-600</i>: <u class="c600">…</u>;
 <i>$primary-700</i>: <u class="c700">…</u>;
 
-<em>// Import Pico</em>
-<b>@import</b> <u>"@picocss/pico/scss/pico"</u>;</code></pre>
+<em>// Import Neutrino</em>
+<b>@import</b> <u>"@simon-downes/neutrino/scss/neutrino"</u>;</code></pre>
 
           <p>Alternatively, you can create a custom theme and import it into your project with the components you need.</p>
 
@@ -113,16 +111,16 @@
 <b>@import</b> <u>"path/themes/custom"</u>;
 
 <em>// Import needed components</em>
-<b>@import</b> <u>"@picocss/pico/scss/pico/layout/document"</u>;
-<b>@import</b> <u>"@picocss/pico/scss/pico/layout/sectioning"</u>;
+<b>@import</b> <u>"@simon-downes/neutrino/scss/neutrino/layout/document"</u>;
+<b>@import</b> <u>"@simon-downes/neutrino/scss/neutrino/layout/sectioning"</u>;
 <em>…</em>
 </code></pre>
 
           <p>Compiling a custom SASS version allows you to create a lighter version with only the components that are useful to you.</p>
         </section>
 
-        ${require('./_footer.html')}
-        
+        {{include "./_footer.html"}}
+
       </div>
     </main>
     <script src="js/commons.min.js"></script>

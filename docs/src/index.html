@@ -1,19 +1,18 @@
 <!doctype html>
 <html lang="en">
   <head>
-    ${require('./_head.html') 
-      title="Documentation" 
-      description="Pico works without package manager or dependencies! There are 4 ways to get started with Pico CSS: manually, from a CDN, with NPM, or with Composer."
-      canonical=""
-    }
+    {{include "./_head.html"
+    "Documentation"
+    "Pico works without package manager or dependencies! There are 4 ways to get started with Pico CSS: manually, from a CDN, with NPM, or with Composer."
+    }}
   </head>
 
   <body>
-    ${require('./_nav.html')}
-    
+    {{include "./_nav.html"}}
+
     <main class="container" id="docs">
-      ${require('./_sidebar.html') active="start-link"}
-      
+      {{include "./_sidebar.html" "start-link"}}
+
       <div role="document">
         <section id="start">
           <hgroup>
@@ -30,7 +29,7 @@
           <h3>Install with NPM</h3>
           <pre><code><b>npm</b> <i>install</i> <u>@picocss/pico</u></code></pre>
           <h3>Install with Composer</h3>
-          <pre><code><b>composer</b> <i>require</i> <u>picocss/pico</u></code></pre>          
+          <pre><code><b>composer</b> <i>require</i> <u>picocss/pico</u></code></pre>
           <p>Starter HTML template:</p>
 
 <pre><code><em>&lt;!doctype html&gt;</em>
@@ -50,7 +49,7 @@
 
         </section>
 
-        ${require('./_footer.html')}
+        {{include "./_footer.html"}}
 
       </div>
     </main>

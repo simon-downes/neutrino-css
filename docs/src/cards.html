@@ -1,19 +1,17 @@
 <!doctype html>
 <html lang="en">
   <head>
-    ${require('./_head.html') 
-      title="Cards" 
-      description="A flexible container with graceful spacings across devices and viewports."
-      canonical="cards.html"
-    }
+    {{include "./_head.html" "Cards"
+      "A flexible container with graceful spacings across devices and viewports."
+    }}
   </head>
 
   <body>
-    ${require('./_nav.html')}
-    
+    {{include "./_nav.html"}}
+
     <main class="container" id="docs">
-      ${require('./_sidebar.html') active="cards-link"}
-      
+      {{include "./_sidebar.html" "cards-link"}}
+
       <div role="document">
         <section id="cards">
           <hgroup>
@@ -39,8 +37,8 @@
 
         </section>
 
-        ${require('./_footer.html')}
-        
+        {{include "./_footer.html"}}
+
       </div>
     </main>
     <script src="js/commons.min.js"></script>

@@ -1,19 +1,15 @@
 <!doctype html>
 <html lang="en">
   <head>
-    ${require('./_head.html') 
-      title="Loading" 
-      description="aria-busy='true' enable a loading indicator."
-      canonical="loading.html"
-    }
+    {{include "./_head.html" "Loading" "aria-busy='true' enable a loading indicator." }}
   </head>
 
   <body>
-    ${require('./_nav.html')}
-    
+    {{include "./_nav.html"}}
+
     <main class="container" id="docs">
-      ${require('./_sidebar.html') active="loading-link"}
-      
+      {{include "./_sidebar.html" "loading-link"}}
+
       <div role="document">
         <section id="loading">
           <hgroup>
@@ -42,8 +38,8 @@
           </article>
         </section>
 
-        ${require('./_footer.html')}
-        
+        {{include "./_footer.html"}}
+
       </div>
     </main>
     <script src="js/commons.min.js"></script>

@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    ${require('./_head.html') title="Typography" description="All typographic
-    elements are responsive, allowing text to scale gracefully across devices
-    and viewports." canonical="typography.html" }
+    {{include "./_head.html" "Typography"
+      "All typographic elements are responsive, allowing text to scale gracefully across devices and viewports."
+    }}
   </head>
 
   <body>
-    ${require('./_nav.html')}
+    {{include "./_nav.html"}}
 
     <main class="container" id="docs">
-      ${require('./_sidebar.html') active="typography-link"}
+      {{include "./_sidebar.html" "typography-link"}}
 
       <div role="document">
         <section id="typography">
@@ -193,7 +193,7 @@
             </blockquote>
             <footer class="code">
               <pre><code>&lt;<b>blockquote</b>&gt;
-  "Maecenas vehicula metus tellus, vitae congue turpis hendrerit non. 
+  "Maecenas vehicula metus tellus, vitae congue turpis hendrerit non.
   Nam at dui sit amet ipsum cursus ornare."
   &lt;<b>footer</b>&gt;
     &lt;<b>cite</b>&gt;- Phasellus eget lacinia&lt;/<b>cite</b>&gt;
@@ -203,7 +203,7 @@
           </article>
         </section>
 
-        ${require('./_footer.html')}
+        {{include "./_footer.html"}}
       </div>
     </main>
     <script src="js/commons.min.js"></script>
