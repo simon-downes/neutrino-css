@@ -6,7 +6,7 @@
     "Segoe UI Symbol", "Noto Color Emoji";
   --line-height: 1.5;
   --font-weight: 400;
-  --font-size: 16px;
+  --font-size: 18px;
 
   // Borders
   --border-radius: 0.25rem;
@@ -155,27 +155,27 @@ h6 {
 
 h1 {
   --font-size: 2rem;
-  --typography-spacing-vertical: 3rem;
+  // --typography-spacing-vertical: 3rem;
 }
 
 h2 {
   --font-size: 1.75rem;
-  --typography-spacing-vertical: 2.625rem;
+  // --typography-spacing-vertical: 2.625rem;
 }
 
 h3 {
   --font-size: 1.5rem;
-  --typography-spacing-vertical: 2.25rem;
+  // --typography-spacing-vertical: 2.25rem;
 }
 
 h4 {
   --font-size: 1.25rem;
-  --typography-spacing-vertical: 1.874rem;
+  // --typography-spacing-vertical: 1.874rem;
 }
 
 h5 {
   --font-size: 1.125rem;
-  --typography-spacing-vertical: 1.6875rem;
+  // --typography-spacing-vertical: 1.6875rem;
 }
 
 // Forms elements
@@ -189,12 +189,9 @@ h5 {
 }
 
 // Table
-thead,
-tfoot {
-  th,
-  td {
-    --border-width: 3px;
-  }
+th {
+  --border-width: 3px;
+  --font-weight: bold;
 }
 
 :not(thead, tfoot) > * > td {
